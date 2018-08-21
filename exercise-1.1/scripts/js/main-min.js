@@ -1,0 +1,1 @@
+var app=new Vue({el:"#app",data:{message:"Hello World!",link:"https://www.wikipedia.org/",link_title:"Wikipedia"}});

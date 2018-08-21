@@ -1,0 +1,1 @@
+var app=new Vue({el:"#app",data:{message:"Hello World!"},methods:{writeMessage:function(){return"Hello Moon!"},retrieveMessage:function(){return this.message="Hello Space!",this.message}}});
