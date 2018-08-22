@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Exercise 2.0</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+
+  <div id="app">
+
+    <button type="button" name="button" v-on:click="increase">Click Me</button>
+    <p>{{ counter }}</p>
+
+    <button type="button" name="button" v-on:click="counter++">Click Me +</button>
+    <!-- use simple Javascript inside the Vue instance -->
+    <p>{{ counter * 2 }}</p>
+
+    <hr>
+    <button type="button" name="button" v-on:click="increase2(2)">Click Me 2</button>
+    <!-- pass a custom argument to the function -->
+    <p>{{ counter2 }}</p>
+
+    <hr>
+    <button type="button" name="button" v-on:click="increase3(2, $event)">Click Me 3</button>
+    <!-- pass a custom argument and the default event to the function -->
+    <p>{{ counter3 }}</p>
+
+    <hr>
+    <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }}  {{ y }}
+      <span v-on:mousemove="notUpdateCoordinates">Do Not Update Coordinates</span>
+      <!-- stop the coordinates from updating through a function -->
+      <span v-on:mousemove.stop="">Do Not Update Coordinates</span>
+      <!-- stop the coordinates from updating through an event modifier ".stop" -->
+      <!-- event modifiers can be chained -->
+    </p>
+
+    <input type="text" name="" value="" v-on:keyup.enter.space="logMe">
+    <!-- add an event modifier to specify the key to listen to -->
+    <!-- event modifiers can be chained -->
+
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>

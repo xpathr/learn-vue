@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Lesson 1.0</title>
+  <title>Exercise 1.1</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
@@ -19,6 +19,11 @@
     <!-- add two directives "v-bind" to bind the dynamic data properties from the Vue instance to the attributes of an HTML tag -->
     <!-- pass the arguments ":href" and ":title" to the two directives -->
     <!-- call the properties "link" and "link_title" -->
+    <hr>
+    <p>{{ link_tag }}</p>
+    <hr>
+    <p v-html="link_tag"></p>
+    <!-- add a directive to output a data property as HTML code -->
 
   </div>
 

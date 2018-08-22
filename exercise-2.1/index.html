@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Exercise 1.0</title>
+  <title>Exercise 2.0</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
@@ -15,13 +15,10 @@
 
   <div id="app">
 
+    <input type="text" name="" value="" v-model="message" v-on:input="consoleLog">
+    <!-- add the directive "v-model" to set a double-data binding -->
+    <!-- add the property "message" to bind -->
     <p>{{ message }}</p>
-
-    <input type="text" v-on:input="inputMessage">
-    <!-- add a directive "v-on" (instruction) -->
-    <!-- pass the name ":input" of the DOM event to listen to (input event) to the directive -->
-    <!-- call the function "inputMessage" -->
-    <!-- v-directive:argument="data_property|methods_function" -->
 
   </div>
 
