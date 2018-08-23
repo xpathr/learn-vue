@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Exercise 2.3</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+
+  <div id="app">
+
+    <button type="button" name="button" v-on:click="stCounter++">Increase 1st</button>
+    <button type="button" name="button" v-on:click="stCounter--">Decrease 1st</button>
+    <button type="button" name="button" v-on:click="ndCounter++">Increase 2nd</button>
+    <button type="button" name="button" v-on:click="ndCounter--">Decrease 2nd</button>
+
+    <p>1st Counter: {{ stCounter }}</p>
+    <p>2nd Counter: {{ ndCounter }}</p>
+    <p>1st Result Method: {{ resultMethod() }}</p>
+    <p>1st Result Computed: {{ resultComputed }}</p>
+    <!-- anything declared in computed can be used as a property in data -->
+
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>
