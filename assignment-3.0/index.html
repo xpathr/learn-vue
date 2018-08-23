@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Assignment 3.0</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+
+  <div id="exercise">
+
+    <!-- 1) Show a "result" of 'not there yet' as long as "value" is not equal to 37 - you can change "value" with the buttons. Print 'done' once you did it -->
+    <div>
+        <p>Jump at least {{ threshold }} times.</p>
+        <button @click="value += 1">Normal Jump</button>
+        <button @click="value += 3">Triple Somersault</button>
+        <p>{{ result }}</p>
+    </div>
+
+    <!-- 2) Watch for changes in the "result" and reset the "value" after 5 seconds (hint: setTimeout(..., 5000) -->
+    <div>
+        <input type="text" v-model="timer">
+        <p> The trial resets after {{ timer / 1000 }} seconds you have beaten it.</p>
+    </div>
+
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>

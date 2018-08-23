@@ -1,5 +1,5 @@
 var app = new Vue({
-  el: '#app',
+  el: '#exercise',
   data: {
     stCounter: 0,
     ndCounter: 0,
