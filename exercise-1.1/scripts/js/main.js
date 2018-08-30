@@ -1,5 +1,5 @@
 var app = new Vue({
-  el: '#app',
+  el: '#exercise',
   data: {
     link: 'https://www.wikipedia.org/',
     link_title: 'Wikipedia',

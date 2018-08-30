@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Exercise 3.0</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="styles/css/main.css">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+
+  <div id="exercise">
+
+    <div
+      class="demo"
+      @click="isRed = !isRed"
+      :class="{'red': isRed}"></div>
+      <!-- attach/detach the class "red" when the element is cliked -->
+      <!-- add a "v-on" modifier and "click" argument to change the data property "isRed" from false to true and viceversa when the element is clicked -->
+      <!-- add a "v-bind" modifier and "class" argument -->
+      <!-- pass a javascript object to ":class" where the property is the class to attach and the value is the data property "isRed" (true > attach-it, false > not-attach-it) -->
+      <!-- the class to attach needs to be included in single quotation marks if it contains special characters -->
+      <!-- the binded classes are merged with the already existing classes in the template -->
+    <div
+      class="demo"
+      :class="{'red': isRed}"></div>
+    <div
+      class="demo"></div>
+    <div
+      class="demo"
+      @click="isRed = !isRed"
+      :class="{'red': isRed, 'blue': !isRed}"></div>
+    <div
+      class="demo"
+      @click="isRed = !isRed"
+      :class="demoClasses"></div>
+    <div
+      class="demo"></div>
+
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>

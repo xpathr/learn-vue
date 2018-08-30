@@ -1,6 +1,6 @@
 var app = new Vue({
   // create a new Vue instance
-  el: '#app',
+  el: '#exercise',
   data: {
     // create a new data property
     message: 'Hello World!',

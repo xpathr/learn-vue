@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Exercise 3.2</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="styles/css/main.css">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+
+  <div id="exercise">
+
+    <div
+      class="demo"
+      :style="{'background-color': color}"></div>
+    <div
+      class="demo"
+      :style="{backgroundColor: color}"></div>
+    <div
+      class="demo"
+      :style="style"></div>
+    <div
+      class="demo"
+      :style="[style, {'height': width + 'px'}]"></div>
+    <hr>
+    <input type="text" name="" value="" v-model="color">
+    <input type="text" name="" value="" v-model="width">
+
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>

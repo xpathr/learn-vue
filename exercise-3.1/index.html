@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Exercise 3.1</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="styles/css/main.css">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+
+  <div id="exercise">
+
+    <div
+      class="demo"
+      @click="isRed = !isRed"
+      :class="{'red': isRed}"></div>
+    <div
+      class="demo"
+      :class="color"></div>
+      <!-- attach the class "color" which is a data property -->
+    <div
+      class="demo"
+      :class="[color, {'red': isRed}]"></div>
+      <!-- attach multiple classes through an array syntax -->
+    <hr>
+    <input type="text" name="" value="" v-model="color">
+
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>
