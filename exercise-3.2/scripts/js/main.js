@@ -5,7 +5,7 @@ var app = new Vue({
     width: 100,
   },
   computed: {
-    style: function() {
+    myStyle: function() {
       return {
         'background-color': this.color,
         'width': this.width + 'px',

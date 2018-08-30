@@ -1,0 +1,73 @@
+/* Exercise 1 **/
+
+#effect {
+  width: 100px;
+  height: 100px;
+
+  background-color: gray;
+}
+
+.emphasis {
+  width: 200px !important;
+
+  background-color: red !important;
+}
+
+.deemphasis {
+  width: 50px !important;
+
+  background-color: yellow !important;
+}
+
+/* Exercise 2 **/
+
+.type-color {
+  color: orange;
+}
+
+.type-size {
+  font-size: 2em;
+  line-height: 3em;
+}
+
+/* Exercises 3, 4 and 5 **/
+
+.traffic-light {
+  display: block;
+
+  width: 100px;
+  height: 100px;
+
+  background-color: grey;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.rounded {
+  border-radius: 100%;
+}
+
+.not-rounded {
+  border-radius: 0;
+}
+
+/* Exercise 6 **/
+
+.progress-bar {
+  display: block;
+
+  width: 40px;
+  height: 20px;
+
+  background-color: orange;
+}

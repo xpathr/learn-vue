@@ -1,1 +1,1 @@
-var app=new Vue({el:"#exercise",data:{isRed:!1,color:"green"},computed:{demoClasses:function(){return{red:this.isRed,blue:!this.isRed}}}});
+var app=new Vue({el:"#exercise",data:{isRed:!1,color:"green"},computed:{myClass:function(){return{red:this.isRed,blue:!this.isRed}}}});

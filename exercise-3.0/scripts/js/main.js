@@ -4,7 +4,7 @@ var app = new Vue({
     isRed: false,
   },
   computed: {
-    demoClasses: function() {
+    myClass: function() {
       // class defined as a computer property because it depends on/listens to the state of "isRed"
       return {
         red: this.isRed,

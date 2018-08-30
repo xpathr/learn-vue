@@ -6,7 +6,7 @@ var app = new Vue({
     // save the class name as the value of a data property
   },
   computed: {
-    demoClasses: function() {
+    myClass: function() {
       return {
         red: this.isRed,
         blue: !this.isRed

@@ -20,15 +20,18 @@
     <div
       class="demo"
       :style="{'background-color': color}"></div>
+      <!-- add a bind modifier and style argument -->
+      <!-- the property to attach needs to be included in single quotation marks if it contains special characters -->
     <div
       class="demo"
       :style="{backgroundColor: color}"></div>
+      <!-- the property to attach do not need to be included in single quotation marks if it spelled in camel case syntax -->
     <div
       class="demo"
-      :style="style"></div>
+      :style="myStyle"></div>
     <div
       class="demo"
-      :style="[style, {'height': width + 'px'}]"></div>
+      :style="[myStyle, {'height': width + 'px'}]"></div>
     <hr>
     <input type="text" name="" value="" v-model="color">
     <input type="text" name="" value="" v-model="width">
