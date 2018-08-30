@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Exercise 4.0</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="styles/css/main.css">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+
+  <div id="exercise">
+
+    <template v-if="show">
+      <!-- the modifier "v-if" binds a condition to a property that evaluates to true or false -->
+      <!-- "v-if" attaches or detaches elements from the DOM -->
+      <p>Ah, I see a <strong>dragon</strong>.</p>
+    </template>
+    <template v-else>
+      <p>Ah, I see a <strong>three-headed monkey</strong>.</p>
+    </template>
+    <p v-show="show">Something else.</p>
+    <!-- "v-show" attaches or detaches the style "display: none;" to the element -->
+    <button type="button" name="button" @click="show = !show">Switch!</button>
+
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>

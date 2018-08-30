@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Exercise 4.1</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="styles/css/main.css">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+
+  <div id="exercise">
+
+    <button type="button" name="button" @click="pokemon.push('Pidgey')">Add New</button>
+    <ul>
+      <li v-for="(pokemon, index) in pokemon" :key="pokemon">{{ pokemon }} ({{ index }})</li>
+      <!-- the "v-for" directive loops through an array -->
+    </ul>
+    <hr>
+    <ul>
+      <li v-for="pokemon in myPokemon">{{ pokemon.name}}</li>
+    </ul>
+    <hr>
+    <ul>
+      <li v-for="pokemon in myPokemon">
+        <ul>
+          <li v-for="(detail, key, index) in pokemon">{{key}}: {{ detail }} ({{ index }})</li>
+        </ul>
+      </li>
+    </ul>
+    <hr>
+    <ul>
+      <li v-for="n in 10">{{ n }}</li>
+    </ul>
+    <hr>
+    <template v-for="(pokemon, index) in pokemon">
+      <h1>{{ pokemon }}</h1>
+      <p>{{ index + 1 }}</p>
+    </template>
+
+
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>
