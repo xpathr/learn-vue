@@ -25,9 +25,11 @@
         :class="ex1Classes"></div>
     </div>
     <hr>
+
     <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
     <div :class="['type-color', 'type-size']">I got no class :(</div>
     <hr>
+
     <!-- 3) Let the user enter a class (create some example classes) and attach it -->
     <div>
       <input type="text" v-model="ex3Class">
@@ -35,6 +37,7 @@
         :class="[{'traffic-light': true}, ex3Class]"></div>
     </div>
     <hr>
+
     <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
     <div>
       <input type="text" v-model="ex4Class">
@@ -44,6 +47,7 @@
         :class="[ex4Class, {'rounded': ex4isRounded}]"></div>
     </div>
     <hr>
+
     <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
     <div>
       <input type="text" v-model="ex5Styles['background-color']">
@@ -52,6 +56,7 @@
         :style="ex5Styles"></div>
     </div>
     <hr>
+
     <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
     <div>
       <button v-on:click="startProgress">Start Progress</button>

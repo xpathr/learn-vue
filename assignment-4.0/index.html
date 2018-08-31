@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Assignment 4.0</title>
+  <title>Assignment 4.1</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,49 +17,38 @@
 
   <div id="exercise">
 
-    <!-- 1) Start the Effect with the Button. The Effect should alternate the "highlight" or "shrink" class on each new setInterval tick (attach respective class to the div with id "effect" below) -->
+    <!-- 1) Hook up the button to toggle the display of the two paragraphs. Use both v-if and v-show and inspect the elements to see the difference -->
     <div>
-      <button @click="startEffect">Start Effect</button>
-      <div
-        id="effect"
-        :class="ex1Class"></div>
+      <button @click="show = !show">Toggle</button>
+      <p v-if="show">You either see me…</p>
+      <p v-if="!show">…or me</p>
+      <p v-show="show">You either see me…</p>
+      <p v-show="!show">…or me</p>
     </div>
-    <hr>
-    <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
-    <div :class="['type-color', 'type-size']">I got no class :(</div>
-    <hr>
-    <!-- 3) Let the user enter a class (create some example classes) and attach it -->
-    <div>
-      <input type="text" v-model="ex3Class">
-      <div
-        class="traffic-light"
-        :class="ex3Class"></div>
-    </div>
-    <hr>
-    <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
-    <div>
-      <input type="text" v-model="ex4Class">
-      <input type="text" v-model="ex4Shape">
-      <div
-        class="traffic-light"
-        :class="[ex4Class, {'rounded': ex4Shape, 'not-rounded': !ex4Shape}]"></div>
-    </div>
-    <hr>
-    <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
-    <div>
-      <input type="text" v-model="ex5StyleProperty">
-      <div
-        class="traffic-light"
-        :style="{'background-color': ex5StyleProperty}"></div>
-    </div>
-    <hr>
-    <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
-    <div>
-      <button v-on:click="startProgress">Start Progress</button>
-      <div
-        class="progress-bar"
-        :style="{'width': ex6Width + 'px'}"></div>
-    </div>
+
+    <!-- 2) Output an <ul> of array elements of your choice. Also print the index of each element. -->
+    <ul>
+      <li v-for="(pokemon, index) in pokemon">{{ pokemon }} ({{ index }})</li>
+    </ul>
+
+    <!-- 3) Print all key-value pairs of the following object: {title: 'Lord of the Rings', author: 'J.R.R. Tolkiens', books: '3'}. Also print the index of each item. -->
+    <ul>
+      <li v-for="(series, key, index) in mySeries">{{ key }}: {{ series }} ({{ index }})</li>
+    </ul>
+
+    <!-- 4) Print the following object (only the values) and also create a nested loop for the array: {name: 'TESTOBJECT', data: [1.67, 1.33, 0.98, 2.21]} (hint: use v-for and v-if to achieve this) -->
+    <ul>
+      <li v-for="item in stuff">
+        <template v-if="Array.isArray(item)">
+          <ul>
+            <li v-for="(detail, index) in item">{{ detail }} ({{ index }})</li>
+          </ul>
+        </template>
+        <template v-else>
+          {{ item }}
+        </template>
+      </li>
+    </ul>
 
   </div>
 

@@ -1,25 +1,39 @@
 var app = new Vue({
   el: '#exercise',
   data: {
-    value: 0,
-    threshold: 36,
-    timer: 5000,
+    ex1Emphasis: true,
+    ex1Class: '',
+    ex1Timer: 500,
+    ex3Class: 'red',
+    ex4Class: 'green',
+    ex4Shape: false,
+    ex5StyleProperty: 'red',
+    ex6Width: 20,
+    ex6Timer: 100,
   },
-  computed: {
-    result: function() {
-      console.log('Result updated to ' + this.value);
-      return this.value < 1 ? '' : this.value < 2 ? 'Just ' + this.value + '  jump, uh?' : this.value < 36 ? 'Just ' + this.value + ' jumps in a row, uh?' : this.value == 36 ? 'Wow! ' + this.value + ' jumps in a row!' : 'Wow! More than ' + this.value + ' jumps in a row!';
-    }
-  },
-  watch: {
-    result: function() {
+  methods: {
+    startEffect: function() {
       var vm = this;
-      if (vm.value == vm.threshold) {
-        setTimeout(function() {
-          console.log('Result resetted.');
-          vm.value = 0;
-        }, vm.timer);
-      }
+      setInterval(function() {
+        if (vm.ex1Emphasis == true) {
+          vm.ex1Class = 'emphasis';
+          console.log('Element emphasized.');
+          vm.ex1Emphasis = false;
+          console.log('Emphasis is: ' + vm.ex1Emphasis + '.');
+        } else {
+          vm.ex1Class = 'deemphasis';
+          console.log('Element deemphasized.');
+          vm.ex1Emphasis = true;
+          console.log('Emphasis is: ' + vm.ex1Emphasis + '.');
+        };
+      }, this.ex1Timer);
+    },
+    startProgress: function() {
+      var vm = this;
+      setInterval(function() {
+        vm.ex6Width = vm.ex6Width + 2;
+        console.log('Width increased.');
+      }, this.ex6Timer);
     }
   }
 });
