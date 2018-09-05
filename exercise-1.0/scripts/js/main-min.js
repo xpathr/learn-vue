@@ -1,1 +1,1 @@
-var app=new Vue({el:"#app",data:{message:"Hello World!"},methods:{inputMessage:function(e){this.message=e.target.value}}});
+var app=new Vue({el:"#exercise",data:{message:"Hello World!"},methods:{inputMessage:function(e){this.message=e.target.value}}});

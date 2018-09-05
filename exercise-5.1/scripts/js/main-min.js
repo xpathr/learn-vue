@@ -1,0 +1,1 @@
+Vue.component("hello-world",{template:"<div><h1>Hello World!</h1><p>Hello world!</p></div>"});var exercise1=new Vue({el:"#exercise"});

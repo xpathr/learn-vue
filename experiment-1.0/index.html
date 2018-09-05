@@ -1,0 +1,33 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Experiment 1.0</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+  <script src="scripts/js/hsluv.min.js"></script>
+
+  <div id="exercise">
+    <input type="number" name="" value="" v-model.number="cHSLuv1[0]" v-on:input="translateHSL">
+    <input type="number" name="" value="" v-model.number="cHSLuv1[1]" v-on:input="translateHSL">
+    <input type="number" name="" value="" v-model.number="cHSLuv1[2]" v-on:input="translateHSL">
+    <hr>
+    <input type="number" name="" value="" v-model.number="cRGB1[0]" v-on:input="translateRGB">
+    <input type="number" name="" value="" v-model.number="cRGB1[1]" v-on:input="translateRGB">
+    <input type="number" name="" value="" v-model.number="cRGB1[2]" v-on:input="translateRGB">
+    <hr>
+    <input type="text" name="" value="" v-model="cHEX1" v-on:input="translateHEX">
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>

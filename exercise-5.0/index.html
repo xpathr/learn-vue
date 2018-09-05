@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Exercise 5.0</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+
+  <div id="exercise-1">
+    <h1 ref="myHeading">{{ heading }}</h1>
+    <!-- use "ref" to register a reference accessible in the Vue instance -->
+    <p v-if="paragraphIsVisible">{{ paragraph }}</p>
+    <button type="button" name="button" @click="show" ref="myButton">Show Paragraph</button>
+    <!-- use "ref" to register a reference accessible in the Vue instance -->
+  </div>
+
+  <div id="exercise-2">
+    <h1 ref="heading">{{ heading }}</h1>
+    <button type="button" name="button" @click="change">Change Heading in Exercise 1</button>
+  </div>
+
+  <div id="exercise-3">
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>

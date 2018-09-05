@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Experiment 1.0</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script src="../js/vue.js"></script>
+  <script src="scripts/js/hsluv.min.js"></script>
+
+  <div id="exercise">
+    <input type="number" name="" value="" v-model.number="c1.HSL[0]" v-on:input="translateHSL('c1')">
+    <input type="number" name="" value="" v-model.number="c1.HSL[1]" v-on:input="translateHSL('c1')">
+    <input type="number" name="" value="" v-model.number="c1.HSL[2]" v-on:input="translateHSL('c1')">
+    <hr>
+    <input type="number" name="" value="" v-model.number="c1.RGB[0]" v-on:input="translateRGB('c1')">
+    <input type="number" name="" value="" v-model.number="c1.RGB[1]" v-on:input="translateRGB('c1')">
+    <input type="number" name="" value="" v-model.number="c1.RGB[2]" v-on:input="translateRGB('c1')">
+    <hr>
+    <input type="text" name="" value="" v-model="c1.HEX" v-on:input="translateHEX('c1')">
+    <hr>
+    <button type="button" name="button" @click="debug('c1')">Test</button>
+  </div>
+
+  <script src="scripts/js/main-min.js"></script>
+
+</body>
+
+</html>
