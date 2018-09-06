@@ -47,21 +47,21 @@
     <hr>
     <button type="button" name="button" @click="debug('c2')">Debug</button>
     <hr>
-    <div class="swatch" :style="paint('c1')"></div>
-    <div class="swatch" :style="paint('c1', 'alpha')"></div>
+    <div class="swatch" :style="paint(c1)"></div>
+    <div class="swatch" :style="paint(c1, 'alpha')"></div>
     <hr>
-    <div class="swatch" :style="paint('c2')"></div>
-    <div class="swatch" :style="paint('c2', 'alpha')"></div>
+    <div class="swatch" :style="paint(c2)"></div>
+    <div class="swatch" :style="paint(c2, 'alpha')"></div>
     <hr>
     <button type="button" name="button" @click="interpolate('c1', 'c2')">Interpolate</button>
     <hr>
     <div class="palette">
       <div class="swatch" v-for="(color, index) in palette">{{ color }}</div>
-      <!--<div class="swatch" v-for="(color, index) in palette" :style="paint('color', 'alpha')"></div>-->
+      <div class="swatch" v-for="(color, index) in palette" :style="paint(color, 'alpha')"></div>
     </div>
   </div>
 
-  <script src="scripts/js/main-min.js"></script>
+  <script src="scripts/js/main.js"></script>
 
 </body>
 
