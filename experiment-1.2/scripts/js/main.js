@@ -57,7 +57,7 @@ var exercise = new Vue({
       }
     },
     interpolate: function(c1, c2) {
-      this.palette = [];
+      //this.palette = [];
 
       for(var k = 0; k < this.interpolations; k++) {
 
@@ -84,9 +84,6 @@ var exercise = new Vue({
 
       console.log(this.palette.length);
     }
-  },
-  computed: {
-
   }
 });
 
