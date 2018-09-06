@@ -2,16 +2,17 @@ var exercise = new Vue({
   el: '#exercise',
   data: {
     c1 : {
-      HSL : [0, 0, 0],
-      RGB : [0, 0, 0],
-      HEX : '#000000'
+      HSL : [40, 80, 80],
+      RGB : [246, 186, 145],
+      HEX : '#f6ba91',
+      A : 0.8
     }
   },
   methods: {
     debug: function(c) {
-      console.log('HSLuv: [' + this[c].HSL[0] + ', ' + this[c].HSL[1] + ', ' + this[c].HSL[2] + '].');
-      console.log('RGB: [' + this[c].RGB[0] + ', ' + this[c].RGB[1] + ', ' + this[c].RGB[2] + '].');
-      console.log('HEX: [' + this[c].HEX + '].');
+      console.log('HSLuv: [' + this[c].HSL[0] + ', ' + this[c].HSL[1] + ', ' + this[c].HSL[2] + ', ' + this[c].A + '].');
+      console.log('RGB: [' + this[c].RGB[0] + ', ' + this[c].RGB[1] + ', ' + this[c].RGB[2] + ', ' + this[c].A + '].');
+      console.log('HEX: [' + this[c].HEX + ', ' + this[c].A + '].');
     },
     translateHSL: function(c) {
       var rgb = window.hsluv.hsluvToRgb(this[c].HSL);
@@ -36,9 +37,17 @@ var exercise = new Vue({
       this[c].HSL = [Math.round(hsluv[0]), Math.round(hsluv[1]), Math.round(hsluv[2])];
       this.debug(c);
     },
-    test: function(c) {
-      this.debug(c);
-    }
+    paint: function(c, a) {
+      if (a == 'alpha') {
+        return {
+          'background-color' : this[c].HEX
+        }
+      } else {
+        return {
+          'background-color' : 'rgba(' + this[c].RGB[0] + ',' + this[c].RGB[1] + ',' + this[c].RGB[2] + ',' + this[c].A + ')'
+        }
+      }
+    },
   }
 });
 
