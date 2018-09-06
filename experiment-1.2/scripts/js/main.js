@@ -57,14 +57,7 @@ var exercise = new Vue({
       }
     },
     interpolate: function(c1, c2) {
-      this.palette.unshift({
-        c1 : {
-          HSL : this[c1].HSL,
-          RGB : this[c1].RGB,
-          HEX : this[c1].HEX,
-          A : this[c1].A
-        }
-      });
+      this.palette = [];
 
       for(var k = 0; k < this.interpolations; k++) {
 
@@ -81,28 +74,13 @@ var exercise = new Vue({
         rgb = [Math.round(rgb[0] * 255), Math.round(rgb[1] * 255), Math.round(rgb[2] * 255)];
         //a = Math.round(a);
 
-        var property = 'c' + (k + 2);
-
         this.palette.unshift({
-          [property] : {
-            HSL : [hsl[0], hsl[1], hsl[2]],
-            RGB : [rgb[0], rgb[1], rgb[2]],
-            HEX : hex,
-            A : a
-          }
+          HSL : [hsl[0], hsl[1], hsl[2]],
+          RGB : [rgb[0], rgb[1], rgb[2]],
+          HEX : hex,
+          A : a
         });
       }
-
-      var lastColor = 'c' + (this.interpolations + 2);
-
-      this.palette.unshift({
-        [lastColor] : {
-          HSL : this[c1].HSL,
-          RGB : this[c1].RGB,
-          HEX : this[c1].HEX,
-          A : this[c1].A
-        }
-      });
 
       console.log(this.palette.length);
     }
