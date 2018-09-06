@@ -48,16 +48,16 @@ var exercise = new Vue({
     paint: function(c, a) {
       if (a == 'alpha') {
         return {
-          'background-color' : this[c].HEX
+          'background-color' : c.HEX
         }
       } else {
         return {
-          'background-color' : 'rgba(' + this[c].RGB[0] + ',' + this[c].RGB[1] + ',' + this[c].RGB[2] + ',' + this[c].A + ')'
+          'background-color' : 'rgba(' + c.RGB[0] + ',' + c.RGB[1] + ',' + c.RGB[2] + ',' + c.A + ')'
         }
       }
     },
     interpolate: function(c1, c2) {
-      //this.palette = [];
+      this.palette = [];
 
       for(var k = 0; k < this.interpolations; k++) {
 
